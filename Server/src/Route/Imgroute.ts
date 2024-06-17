@@ -37,7 +37,6 @@ server.post('/getimg', async (c) => {
           },
         }
       );
-      console.log(output);
       return c.json(output); 
     } catch (error : any) {
       console.error('Error running replicate:', error);
