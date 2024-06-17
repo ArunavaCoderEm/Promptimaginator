@@ -3,7 +3,7 @@
 
 # Deployment ?
 
-This is not deployed as the APIs costs after a cirtain limit 🫠.
+This is not deployed as the APIs costs after a certain limit 🫠.
 
 # Replicate
 
