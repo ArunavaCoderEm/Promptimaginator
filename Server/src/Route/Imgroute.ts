@@ -10,29 +10,39 @@ const replicate = new Replicate({
   auth: process.env.REPLICATE_API_TOKEN,
 });
 
-server.post('/getimg', async(c) => {
+const modelString = process.env.REPLICATE_STRING as `${string}/${string}` | `${string}/${string}:${string}`;
+
+if (!modelString) {
+  throw new Error('REPLICATE_STRING environment variable is not set or has an invalid format');
+}
+
+server.post('/getimg', async (c) => {
     try {
-        const { prompt } = await c.req.json();
-        const output = await replicate.run(
-            "stability-ai/stable-diffusion:ac732df83cea7fff18b8472768c88ad041fa750ff7682a21affe81863cbe77e4",
-            {
-                input: {
-                width: 1024,
-                height: 768,
-                prompt,
-                scheduler: "K_EULER",
-                num_outputs: 1,
-                guidance_scale: 10.0,
-                num_inference_steps: 100
-                }
-            }
-            );
-            return c.json(output); 
+      const { prompt } = await c.req.json();
+      const output = await replicate.run(
+        modelString,
+        {
+          input: {
+            width: 1156,
+            height: 768,
+            prompt,
+            sampler: 'Default',
+            scheduler: 'Default',
+            lora_strength: 1,
+            output_format: 'webp',
+            output_quality: 80,
+            negative_prompt: 'hands, pastels, spots, photo, text, watermark',
+            denoise_strength: 0.65,
+            number_of_images: 3,
+          },
         }
-    catch (error : any) {
-        console.error('Error running replicate:', error);
-        return c.json({ error: error.message }, 500);
+      );
+      console.log(output);
+      return c.json(output); 
+    } catch (error : any) {
+      console.error('Error running replicate:', error);
+      return c.json({ error: error.message }, 500);
     }
-})
+  });
 
 export default server;
