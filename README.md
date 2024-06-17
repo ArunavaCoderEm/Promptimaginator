@@ -1,4 +1,4 @@
-# TaskEase
+# PromptImaginator
 # Vite React + TypeScript + Tailwind + HonoJS
 
 # Deployment ?
@@ -100,7 +100,11 @@ For Backend  <br />
 
 ## Screenshots
 
+![Screenshot 2024-06-17 175537](https://github.com/ArunavaCoderEm/Promptimaginator/assets/121813676/a9236670-42d5-4cff-ad75-d5c5e85501ab)
+![Screenshot 2024-06-17 175548](https://github.com/ArunavaCoderEm/Promptimaginator/assets/121813676/a567c658-abe5-4ba6-915c-c6d5d8d9ef53)
 
+
+![Screenshot 2024-06-17 180307](https://github.com/ArunavaCoderEm/Promptimaginator/assets/121813676/81165c25-6c0d-4770-89f7-442350318222)
 
 ## Contribution
 Arunava Dutta && 💙
