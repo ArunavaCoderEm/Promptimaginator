@@ -30,7 +30,7 @@ Our website leverages Replicate, powered by Hugging Face models, to dynamically 
 List of the key features of the project here.
 
 - Has AI image generation using prompt.
-- Fast and reliebale.
+- Fast and reliable..
 
 ## Getting Started
 
