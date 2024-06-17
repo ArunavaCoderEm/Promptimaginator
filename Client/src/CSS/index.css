@@ -1,3 +1,11 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.sha {
+    box-shadow: 0 0 20px white;
+}
+
+.shaa {
+    filter: drop-shadow(0 0 20px rgb(230, 101, 245));
+}
