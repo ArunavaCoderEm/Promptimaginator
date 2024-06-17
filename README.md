@@ -41,7 +41,6 @@ List of the key features of the project here.
 - Vite + React
 - Tailwind
 - Typescript
-- MongoDB
 - npm 
 
 ### Installation
