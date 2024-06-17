@@ -9,3 +9,7 @@
 .shaa {
     filter: drop-shadow(0 0 20px rgb(230, 101, 245));
 }
+
+html {
+    scroll-behavior: smooth;
+}

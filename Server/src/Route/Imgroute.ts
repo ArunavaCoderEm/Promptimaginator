@@ -33,7 +33,7 @@ server.post('/getimg', async (c) => {
             output_quality: 80,
             negative_prompt: 'hands, pastels, spots, photo, text, watermark',
             denoise_strength: 0.65,
-            number_of_images: 3,
+            number_of_images: 4,
           },
         }
       );
