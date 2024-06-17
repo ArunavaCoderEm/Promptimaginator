@@ -7,9 +7,9 @@ const port = 8188
 
 const app = new Hono()
 
-app.use('/img/*', cors())
+app.use('/*', cors())
 app.use(
-  '/img/*',
+  '/*',
   cors({
     origin: '*',
     allowHeaders: ['X-Custom-Header', 'Upgrade-Insecure-Requests'],
